@@ -6,12 +6,14 @@
 		<title>Alpine.js Test</title>
 		<link rel="stylesheet" href="style.css" />
 		<script defer src="./alpinejs-3.14.8.min.js"></script>
+		<script src="./index.js"></script>
 	</head>
 	<body>
-		<div class="container" x-data="{ count: 0, name: 'Luigi' }">
+		<div class="container" x-data="counter">
 			<h1>I love <span x-text="name"></span></h1>
 			<p>The current count is <span x-text="count"></span></p>
 			<button x-on:click="count++">Increment</button>
+			<button x-on:click="logCount">Log count</button>
 		</div>
 	</body>
 </html>
