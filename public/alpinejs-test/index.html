@@ -4,7 +4,14 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Alpine.js Test</title>
+		<link rel="stylesheet" href="style.css" />
 		<script defer src="./alpinejs-3.14.8.min.js"></script>
 	</head>
-	<body></body>
+	<body>
+		<div class="container" x-data="{ count: 0, name: 'Luigi' }">
+			<h1>I love <span x-text="name"></span></h1>
+			<p>The current count is <span x-text="count"></span></p>
+			<button x-on:click="count++">Increment</button>
+		</div>
+	</body>
 </html>
