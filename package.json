@@ -1,7 +1,7 @@
 {
 	"private": true,
 	"scripts": {
-		"test": "http-server ./public -c-1"
+		"start": "http-server ./public -c-1"
 	},
 	"author": "armornick",
 	"license": "BSD0",
