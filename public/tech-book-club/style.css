@@ -203,6 +203,25 @@
 		}
 	}
 
+	.avatar {
+		--avatar-size: 3rem;
+		width: var(--avatar-size);
+		height: var(--avatar-size);
+		border: 2px solid var(--color-light);
+		border-radius: 50%;
+		object-fit: cover;
+	}
+
+	.avatars {
+		display: flex;
+		align-items: center;
+		margin-right: 1rem;
+
+		& > .avatar + .avatar {
+			margin-left: -12%;
+		}
+	}
+
 	.circled {
 		border: 2px solid var(--color-orange);
 		border-radius: 70%;
