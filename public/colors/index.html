@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="colors.css">
+    <title>Color Tools</title>
+</head>
+<body>
+    <main>
+        <h2>HWB color viewer</h2>
+        <div class="grid grid-cols-2 gap-2">
+            <div>
+                <p>Hue: <x-slider class="hwb-hue-slider" max="360"></x-slider></p>
+                <p>Whiteness: <x-slider class="hwb-whiteness-slider"></x-slider></p>
+                <p>Blackness: <x-slider class="hwb-blackness-slider"></x-slider></p>
+            </div>
+            <div class="hwb-demo center">
+                <div class="box"></div>
+            </div>
+        </div>
+        <h2>OKLAB color viewer</h2>
+        <div class="grid grid-cols-2 gap-2">
+            <div>
+                <p>Lightness: <x-slider class="oklab-lightness-slider"></x-slider></p>
+                <p>A axis: <x-slider class="oklab-a-slider" min="-100"></x-slider></p>
+                <p>B axis: <x-slider class="oklab-b-slider" min="-100"></x-slider></p>
+            </div>
+            <div class="oklab-demo center">
+                <div class="box"></div>
+            </div>
+        </div>
+    </main>
+    <script type="module" src="slider.js"></script>
+    <script type="module" src="colors.js"></script>
+</body>
+</html>

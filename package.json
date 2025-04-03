@@ -1,7 +1,8 @@
 {
 	"private": true,
 	"scripts": {
-		"start": "http-server ./public -c-1"
+		"start": "http-server ./public -c-1",
+		"dev": "http-server ./public -c-1"
 	},
 	"author": "armornick",
 	"license": "BSD0",

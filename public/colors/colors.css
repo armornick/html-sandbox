@@ -1,0 +1,36 @@
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+    font-family: system-ui, sans-serif;
+    color: #111;
+    line-height: 1.5;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.grid { display: grid; }
+.grid-cols-2 { grid-template-columns: repeat(2, 1fr); }
+
+.gap-2 { gap: 1rem; }
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* -------------------------------------------------------------------------- */
+
+.box {
+    width: 10rem;
+    height: 10rem;
+    border: 1px solid black;
+}
+
+.hwb-demo > .box {
+    background-color: hwb(var(--hue, 0) var(--whiteness, 0) var(--blackness, 0));
+}
+
+.oklab-demo > .box {
+    background-color: oklab(var(--lightness, 0) var(--a-axis, 0) var(--b-axis, 0))
+}
