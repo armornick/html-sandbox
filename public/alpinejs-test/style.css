@@ -1,51 +1,94 @@
+@layer base, components, utilities;
+
 :root {
 	--font-rounded-sans: ui-rounded, Hiragino Maru Gothic ProN, Quicksand,
 		Comfortaa, Manjari, Arial Rounded MT, Arial Rounded MT Bold, Calibri,
 		source-sans-pro, sans-serif;
 	--gray-1: hsl(210 16.7% 95.3%);
+	--gray-4: hsl(210 14% 83.1%);
+	--gray-5: hsl(210 10.8% 71%);
 	--gray-7: hsl(210 8.8% 31.4%);
 	--gray-8: hsl(210 10.8% 14.5%);
+	--red-5: hsl(0 100% 71%);
 }
 
-*,
-*::before,
-*::after {
-	box-sizing: border-box;
+@layer base {
+	*,
+	*::before,
+	*::after {
+		box-sizing: border-box;
+	}
+
+	body {
+		font-size: 1.25rem;
+		font-family: var(--font-rounded-sans);
+		line-height: 1.5;
+		color: var(--gray-1);
+		background-color: var(--gray-8);
+	}
+
+	h1,
+	h2,
+	h3,
+	h4,
+	h5 {
+		margin-top: 0;
+		margin-bottom: 0.5em;
+	}
+
+	.container {
+		max-width: 60rem;
+		margin-inline: auto;
+		padding: 0.5rem 1rem;
+	}
+
+	button,
+	.button {
+		color: var(--gray-1);
+		background-color: var(--gray-7);
+		border-color: transparent;
+		border-radius: 5px;
+		padding: 0.5rem 1rem;
+		cursor: pointer;
+
+		&:hover {
+			opacity: 0.8;
+		}
+	}
 }
 
-body {
-	font-size: 1.25rem;
-	font-family: var(--font-rounded-sans);
-	line-height: 1.5;
-	color: var(--gray-1);
-	background-color: var(--gray-8);
+@layer components {
+	.form-field {
+		max-width: 30rem;
+		margin-bottom: 0.75rem;
+		position: relative;
+
+		& > .hint {
+			position: absolute;
+			top: 0;
+			right: 0;
+			color: var(--gray-5);
+			font-size: 0.95rem;
+			margin: 0;
+			padding: 0;
+		}
+
+		& :is(input[type="text"], input[type="password"], select) {
+			display: block;
+			width: 100%;
+			padding: 4px 8px;
+		}
+
+		textarea {
+			display: block;
+			width: 100%;
+			min-height: 5rem;
+		}
+	}
 }
 
-h1,
-h2,
-h3,
-h4,
-h5 {
-	margin-top: 0;
-	margin-bottom: 0.5em;
-}
-
-.container {
-	max-width: 60rem;
-	margin-inline: auto;
-	padding: 0.5rem 1rem;
-}
-
-button,
-.button {
-	color: var(--gray-1);
-	background-color: var(--gray-7);
-	border-color: transparent;
-	border-radius: 5px;
-	padding: 0.5rem 1rem;
-	cursor: pointer;
-
-	&:hover {
-		opacity: 0.8;
+@layer utilities {
+	.warning {
+		color: var(--red-5);
 	}
 }
