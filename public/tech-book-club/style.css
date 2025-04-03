@@ -21,7 +21,10 @@
 	--font-size-fluid-1: clamp(1rem, 4vw, 1.5rem);
 	--font-size-fluid-2: clamp(1.5rem, 6vw, 2.5rem);
 	--font-size-fluid-3: clamp(2rem, 9vw, 3.5rem);
+	--font-size-fluid-4: clamp(3rem, 12vw, 5rem);
 	/* Misc */
+	--container-width: 60rem;
+	--container-padding: 1rem;
 	--rounded: 10px;
 }
 
@@ -102,13 +105,54 @@
 		background-size: var(--square-size) var(--square-size);
 	}
 
+	.container {
+		max-width: var(--container-width, 80rem);
+		margin-inline: auto;
+		padding: var(--container-padding);
+	}
+
 	.top-header {
 		padding-inline: 1rem;
 		padding-block: 1.5rem;
 	}
 
+	.side-by-side {
+		--container-width: 80rem;
+
+		@media (min-width: 60rem) {
+			--half-width: calc(var(--container-width) / 2);
+			display: flex;
+			gap: 2rem;
+			margin-block: 2rem;
+
+			& > * {
+				flex: 1 1 var(--half-width);
+				max-width: var(--half-width);
+			}
+
+			img {
+				object-fit: contain;
+			}
+		}
+
+		&.reversed {
+			flex-direction: row-reverse;
+		}
+	}
+
+	.hero-text {
+		& > h2 {
+			font-size: var(--font-size-fluid-4);
+			font-weight: 800;
+		}
+	}
+
 	.features {
 		background-color: var(--bg-light-color);
+	}
+
+	.testimonial {
+		text-align: center;
 	}
 
 	.tech-reading-journey {
@@ -128,13 +172,13 @@
 		border-radius: var(--rounded);
 		padding-block: 3rem;
 
-		& > h2 {
+		& h2 {
 			color: var(--color-light);
 			font-weight: 500;
 			text-align: center;
 		}
 
-		& > p {
+		& p {
 			color: var(--color-light);
 		}
 	}
@@ -143,6 +187,13 @@
 		display: flex;
 		justify-content: center;
 		gap: 1rem;
+	}
+
+	.membership-options-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(min(15rem, 100%), 1fr));
+		gap: 24px;
+		margin-bottom: 2rem;
 	}
 }
 
@@ -172,7 +223,8 @@
 	.button {
 		display: flex;
 		justify-content: center;
-		/* max-width: max-content; */
+		max-width: max-content;
+		margin-inline: auto;
 		background-color: var(--button-color, var(--color-orange-lighter));
 		border: 2px solid currentColor;
 		border-radius: var(--rounded);
@@ -201,6 +253,15 @@
 		& > .content {
 			padding-block: 1em;
 		}
+
+		&.recommended {
+			background-color: var(--color-orange-lighter);
+			background-image: linear-gradient(
+				to bottom right,
+				var(--color-orange-lighter),
+				var(--color-orange-light)
+			);
+		}
 	}
 
 	.avatar {
@@ -222,6 +283,12 @@
 		}
 	}
 
+	.avatars-wrapper {
+		display: flex;
+		max-width: max-content;
+		margin-inline: auto;
+	}
+
 	.circled {
 		border: 2px solid var(--color-orange);
 		border-radius: 70%;
@@ -229,12 +296,6 @@
 }
 
 @layer utilities {
-	.container {
-		max-width: var(--container-width, 60rem);
-		margin-inline: auto;
-		padding-inline: 1rem;
-	}
-
 	.flow > * + * {
 		margin-top: var(--flow-space, 1.5em);
 	}

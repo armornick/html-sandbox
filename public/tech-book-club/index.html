@@ -7,65 +7,95 @@
 		<title>Tech book club</title>
 	</head>
 	<body class="bg-squares">
-		<header class="top-header">
+		<header class="top-header container">
 			<h1 class="logo">Tech book club</h1>
 		</header>
-		<section class="hero container flow">
-			<h2>Join the ultimate tech book club</h2>
-			<p>
-				Turn your reading time into learning time with fellow tech
-				enthusiasts. Get curated recommendations, join vibrant
-				discussions, and level up your skills one chapter at a time.
-			</p>
-			<p>
-				<a href="#membership-options" class="button">
-					Review membership options &darr;
-				</a>
-			</p>
-			<div class="flex">
-				<div class="avatars">
-					<img src="pexels-olly-3763188.jpg" alt="" class="avatar" />
-					<img src="pexels-olly-774909.jpg" alt="" class="avatar" />
-					<img
-						src="pexels-pixabay-415829.jpg"
-						alt=""
-						class="avatar"
-					/>
-				</div>
-				<div>
-					<p>
-						<span role="img" aria-label="5 stars">⭐⭐⭐⭐⭐</span>
-					</p>
-					<p class="emphasis">200+ developers joined already</p>
+		<section class="hero side-by-side container">
+			<div class="flow hero-text">
+				<h2>Join the ultimate tech book club</h2>
+				<p>
+					Turn your reading time into learning time with fellow tech
+					enthusiasts. Get curated recommendations, join vibrant
+					discussions, and level up your skills one chapter at a time.
+				</p>
+				<p>
+					<a href="#membership-options" class="button">
+						Review membership options &darr;
+					</a>
+				</p>
+				<div class="avatars-wrapper">
+					<div class="avatars">
+						<img
+							src="pexels-olly-3763188.jpg"
+							alt=""
+							class="avatar"
+						/>
+						<img
+							src="pexels-olly-774909.jpg"
+							alt=""
+							class="avatar"
+						/>
+						<img
+							src="pexels-pixabay-415829.jpg"
+							alt=""
+							class="avatar"
+						/>
+					</div>
+					<div>
+						<p>
+							<span role="img" aria-label="5 stars"
+								>⭐⭐⭐⭐⭐</span
+							>
+						</p>
+						<p class="emphasis">200+ developers joined already</p>
+					</div>
 				</div>
 			</div>
 			<img class="rounded" src="pexels-cottonbro-4861347.jpg" alt="" />
 		</section>
-		<section class="features container flow">
-			<h2>Read together, grow together</h2>
-			<ul class="list-checkmark">
-				<li>Monthly curated tech reads selected by industry experts</li>
-				<li>Virtual and in-person meetups for deep-dive discussions</li>
-				<li>Early access to new tech book releases</li>
-				<li>Author Q&A sessions with tech thought leaders</li>
-			</ul>
-			<img
-				class="rounded"
-				src="pexels-tima-miroshnichenko-6860816.jpg"
-				alt=""
-			/>
-			<h2>Not your average book <span class="circled">club</span></h2>
-			<p>
-				Connect with a community that speaks your language - form
-				<strong>Python</strong> to <strong>TypeScript</strong> and
-				everything in between. Our discussions blend technical depth
-				with practical applications.
-			</p>
-			<img
-				class="rounded"
-				src="pexels-tima-miroshnichenko-6861089.jpg"
-				alt=""
-			/>
+		<section class="features">
+			<div class="reversed side-by-side container">
+				<div class="flow">
+					<h2>Read together, grow together</h2>
+					<ul class="list-checkmark">
+						<li>
+							Monthly curated tech reads selected by industry
+							experts
+						</li>
+						<li>
+							Virtual and in-person meetups for deep-dive
+							discussions
+						</li>
+						<li>Early access to new tech book releases</li>
+						<li>Author Q&A sessions with tech thought leaders</li>
+					</ul>
+				</div>
+				<img
+					class="rounded"
+					src="pexels-tima-miroshnichenko-6860816.jpg"
+					alt=""
+				/>
+			</div>
+			<div class="side-by-side container">
+				<div class="flow">
+					<h2>
+						Not your average book <span class="circled">club</span>
+					</h2>
+					<p>
+						Connect with a community that speaks your language -
+						form
+						<strong>Python</strong> to
+						<strong>TypeScript</strong> and everything in between.
+						Our discussions blend technical depth with practical
+						applications.
+					</p>
+				</div>
+				<img
+					class="rounded"
+					src="pexels-tima-miroshnichenko-6861089.jpg"
+					alt=""
+				/>
+			</div>
 			<div class="tech-reading-journey container bg-squares flow">
 				<h2>Your tech reading journey</h2>
 				<ol>
@@ -75,48 +105,54 @@
 					<li>Attend exclusive meetups</li>
 				</ol>
 			</div>
-			<h2 id="membership-options">Membership options</h2>
-			<article class="card">
-				<header>
-					<h3>Starter</h3>
-					<p class="price"><strong>$19</strong>/month</p>
-				</header>
-				<div class="content flow">
-					<ul class="list-checkmark">
-						<li>1 book/month</li>
-						<li>Online forums</li>
-					</ul>
-					<a href="#" class="button">Subscribe now</a>
+			<div class="container">
+				<h2 id="membership-options">Membership options</h2>
+				<div class="membership-options-grid">
+					<article class="card">
+						<header>
+							<h3>Starter</h3>
+							<p class="price"><strong>$19</strong>/month</p>
+						</header>
+						<div class="content flow">
+							<ul class="list-checkmark">
+								<li>1 book/month</li>
+								<li>Online forums</li>
+							</ul>
+							<a href="#" class="button">Subscribe now</a>
+						</div>
+					</article>
+					<article class="card recommended">
+						<header>
+							<h3>Pro</h3>
+							<p class="price"><strong>$29</strong>/month</p>
+						</header>
+						<div class="content flow">
+							<ul class="list-checkmark">
+								<li>2 book/month</li>
+								<li>Virtual meetups</li>
+							</ul>
+							<a href="#" class="button">Subscribe now</a>
+						</div>
+					</article>
+					<article class="card">
+						<header>
+							<h3>Enterprise</h3>
+							<p class="price"><strong>Custom</strong></p>
+						</header>
+						<div class="content flow">
+							<ul class="list-checkmark">
+								<li>Team access</li>
+								<li>Private sessions</li>
+							</ul>
+							<a href="#" class="button">Talk to us</a>
+						</div>
+					</article>
 				</div>
-			</article>
-			<article class="card recommended">
-				<header>
-					<h3>Pro</h3>
-					<p class="price"><strong>$29</strong>/month</p>
-				</header>
-				<div class="content flow">
-					<ul class="list-checkmark">
-						<li>2 book/month</li>
-						<li>Virtual meetups</li>
-					</ul>
-					<a href="#" class="button">Subscribe now</a>
-				</div>
-			</article>
-			<article class="card">
-				<header>
-					<h3>Enterprise</h3>
-					<p class="price"><strong>Custom</strong></p>
-				</header>
-				<div class="content flow">
-					<ul class="list-checkmark">
-						<li>Team access</li>
-						<li>Private sessions</li>
-					</ul>
-					<a href="#" class="button">Talk to us</a>
-				</div>
-			</article>
-			<div class="testimonial flow">
-				<p><span role="img" aria-label="5 stars">⭐⭐⭐⭐⭐</span></p>
+			</div>
+			<div class="testimonial container flow">
+				<p>
+					<span role="img" aria-label="5 stars">⭐⭐⭐⭐⭐</span>
+				</p>
 				<blockquote>
 					<p>
 						"This book club transformed my technical reading from a
@@ -127,36 +163,48 @@
 				<p>Sarah Chen, Software Architect</p>
 			</div>
 		</section>
-		<footer class="container flow text-light">
-			<h2>Ready to debug your reading list?</h2>
-			<a href="#membership-options" class="button inverted"
-				>Review membership options &uarr;</a
-			>
-			<div class="flex">
-				<div class="avatars">
-					<img src="pexels-olly-3763188.jpg" alt="" class="avatar" />
-					<img src="pexels-olly-774909.jpg" alt="" class="avatar" />
-					<img
-						src="pexels-pixabay-415829.jpg"
-						alt=""
-						class="avatar"
-					/>
+		<footer>
+			<div class="container flow text-light">
+				<h2>Ready to debug your reading list?</h2>
+				<a href="#membership-options" class="button inverted"
+					>Review membership options &uarr;</a
+				>
+				<div class="avatars-wrapper">
+					<div class="avatars">
+						<img
+							src="pexels-olly-3763188.jpg"
+							alt=""
+							class="avatar"
+						/>
+						<img
+							src="pexels-olly-774909.jpg"
+							alt=""
+							class="avatar"
+						/>
+						<img
+							src="pexels-pixabay-415829.jpg"
+							alt=""
+							class="avatar"
+						/>
+					</div>
+					<div>
+						<p>
+							<span role="img" aria-label="5 stars"
+								>⭐⭐⭐⭐⭐</span
+							>
+						</p>
+						<p class="emphasis text-light">
+							200+ developers joined already
+						</p>
+					</div>
 				</div>
-				<div>
-					<p>
-						<span role="img" aria-label="5 stars">⭐⭐⭐⭐⭐</span>
-					</p>
-					<p class="emphasis text-light">
-						200+ developers joined already
-					</p>
-				</div>
+				<hr />
+				<p class="text-center">&copy; 2024 - Tech Book Club</p>
+				<p class="socials">
+					<span><a class="text-light" href="#">BlueSky</a></span>
+					<span><a class="text-light" href="#">LinkedIn</a></span>
+				</p>
 			</div>
-			<hr />
-			<p class="text-center">&copy; 2024 - Tech Book Club</p>
-			<p class="socials">
-				<span><a class="text-light" href="#">BlueSky</a></span>
-				<span><a class="text-light" href="#">LinkedIn</a></span>
-			</p>
 		</footer>
 	</body>
 </html>
