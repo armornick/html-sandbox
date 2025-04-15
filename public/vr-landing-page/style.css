@@ -37,7 +37,7 @@
 
 @layer components {
 	.bg-image {
-		--bg-overlay-opacity: 0.4;
+		--bg-overlay-opacity: 0.5;
 		--bg-overlay-color: rgba(0, 0, 0, var(--bg-overlay-opacity));
 
 		background-image: linear-gradient(
@@ -86,7 +86,7 @@
 	}
 
 	.container {
-		max-width: min(90%, 60rem);
+		max-width: min(90%, 50rem);
 		margin-inline: auto;
 	}
 
@@ -133,6 +133,13 @@
 		}
 	}
 
+	.top-header {
+		@media (min-width: 45rem) {
+			display: flex;
+			justify-content: space-between;
+		}
+	}
+
 	mobile-menu {
 		display: flex;
 		justify-content: space-between;
@@ -148,18 +155,34 @@
 			background-color: transparent;
 			border: none;
 		}
+
+		@media (min-width: 45rem) {
+			.toggle.js-enabled {
+				display: none;
+			}
+		}
 	}
 
 	.top-nav {
-		transition: height 300ms ease-in-out;
+		/* layer for specificity */
+		@layer {
+			&[aria-expanded] {
+				height: 0;
+				overflow: hidden;
+			}
 
-		&[aria-expanded] {
-			height: 0;
-			overflow: hidden;
+			&[aria-expanded="true"] {
+				height: revert;
+			}
 		}
 
-		&[aria-expanded="true"] {
+		@media (min-width: 45rem) {
 			height: revert;
+
+			ul {
+				display: flex;
+				flex-direction: row;
+			}
 		}
 	}
 
@@ -167,16 +190,41 @@
 		border: 4px solid var(--gray-1);
 		color: var(--gray-1);
 		font-size: 3rem;
+		font-weight: 300;
 		margin-block: 3rem;
 		padding: 1rem;
 		text-transform: uppercase;
 		text-wrap: balance;
+
+		@media (min-width: 30rem) {
+			max-width: 30rem;
+		}
 	}
 
 	.intro {
 		color: var(--gray-6);
 		font-size: 1.25rem;
 		font-weight: 600;
+	}
+
+	.our-creations-section {
+		@media (min-width: 45rem) {
+			display: grid;
+			grid-template-areas: "header button" "grid grid";
+			align-items: center;
+
+			h2 {
+				grid-area: header;
+			}
+
+			.see-all {
+				grid-area: button;
+			}
+
+			.creations {
+				grid-area: grid;
+			}
+		}
 	}
 
 	.creations {
@@ -204,6 +252,19 @@
 				text-decoration: underline;
 			}
 		}
+
+		@media (min-width: 45rem) {
+			display: grid;
+			grid-template-columns: repeat(
+				auto-fill,
+				minmax(min(10rem, 100%), 1fr)
+			);
+
+			li {
+				padding-block: 10rem 1rem;
+				/* padding-inline: ; */
+			}
+		}
 	}
 
 	.see-all {
@@ -224,6 +285,38 @@
 
 		.logo {
 			display: block;
+		}
+
+		@media (min-width: 45rem) {
+			.footer-content {
+				display: grid;
+				grid-template-areas: "logo socials" "menu copy";
+			}
+
+			.logo {
+				grid-area: logo;
+				justify-self: start;
+			}
+
+			.socials {
+				grid-area: socials;
+				justify-self: end;
+			}
+
+			.menu {
+				grid-area: menu;
+				justify-self: start;
+			}
+
+			.copy {
+				grid-area: copy;
+				justify-self: end;
+			}
+
+			.menu ul {
+				flex-direction: row;
+				justify-content: center;
+			}
 		}
 	}
 
