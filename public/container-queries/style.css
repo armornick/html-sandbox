@@ -1,0 +1,73 @@
+:root {
+	--container-width: 60rem;
+	--primary-color: hsl(120deg 50% 60%);
+	/* --primary-color-darker: hsl(120deg 50% 50%); */
+	--primary-color-lighter: color-mix(in hsl, var(--primary-color), white 15%);
+	--primary-color-darker: color-mix(in hsl, var(--primary-color), black 15%);
+	--rounded: 4px;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+}
+
+body {
+	font-family: system-ui, sans-serif;
+	line-height: 1.5;
+	color: hsl(0deg 0% 10%);
+}
+
+.btn-primary {
+	--button-color: var(--primary-color);
+	background-color: var(--button-color);
+	border: 1px solid var(--button-color);
+	border-radius: var(--rounded);
+	padding: 8px 1rem;
+	cursor: pointer;
+
+	&:where(:hover, :focus) {
+		--button-color: var(--primary-color-lighter);
+	}
+}
+
+main {
+	max-width: var(--container-width);
+	margin-inline: auto;
+	padding: 0.5rem 1rem;
+}
+
+.grid-control {
+	margin-block: 2rem;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: repeat(
+		auto-fit,
+		minmax(min(var(--col-size, 20rem), 100%), 1fr)
+	);
+	gap: 16px;
+}
+
+.animal-wrapper {
+	container-type: inline-size;
+}
+
+.animal {
+	max-height: 20rem;
+	overflow-y: clip;
+
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+
+	@container (min-width: 20rem) {
+		max-height: 15rem;
+		flex-direction: row;
+		align-items: start;
+		gap: 1rem;
+	}
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script defer src="./alpinejs-3.14.8.min.js"></script>
+		<script src="./index.js"></script>
+		<title>Container Queries</title>
+	</head>
+	<body>
+		<main x-data="{ colsize: 20 }">
+			<h1>Container Queries</h1>
+			<div class="grid-control">
+				<button class="btn-primary" @click="colsize = 10">10rem</button>
+				<button class="btn-primary" @click="colsize = 15">15rem</button>
+				<button class="btn-primary" @click="colsize = 20">20rem</button>
+				<button class="btn-primary" @click="colsize = 25">25rem</button>
+				<button class="btn-primary" @click="colsize = 30">30rem</button>
+			</div>
+			<div
+				class="grid"
+				x-data="animals"
+				:style="{ '--col-size': colsize + 'rem' }"
+			>
+				<template x-for="animal in animals">
+					<div class="animal-wrapper">
+						<article class="animal">
+							<img :src="animal.image" />
+							<div class="content">
+								<h2 x-text="animal.name"></h2>
+								<p x-text="animal.description"></p>
+							</div>
+						</article>
+					</div>
+				</template>
+			</div>
+			<p>
+				Images by <a href="https://kenney.nl">Kenney</a>.&nbsp; Text by
+				<a href="https://www.wikipedia.org">Wikipedia</a>.
+			</p>
+		</main>
+	</body>
+</html>
