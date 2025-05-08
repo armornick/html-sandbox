@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<script type="module" src="./main.js"></script>
+		<title>petit-vue Character Generator</title>
+	</head>
+	<body>
+		<main class="container flow">
+			<h1>Character Generator</h1>
+			<button type="button" @click="rollOnce()">Roll (Once)</button>
+			<button type="button" @click="rollTen()">Roll (10 times)</button>
+			<span>Roll Mode:</span>
+			<label for="roll-mode-3d6">
+				3D6
+				<input
+					type="radio"
+					id="roll-mode-3d6"
+					name="roll-mode"
+					value="3D6"
+					v-model="rollMode"
+				/>
+			</label>
+			<label for="roll-mode-4d6">
+				4D6
+				<input
+					type="radio"
+					id="roll-mode-4d6"
+					name="roll-mode"
+					value="4D6"
+					v-model="rollMode"
+				/>
+			</label>
+
+			<article v-for="char in characters" class="card hgroup">
+				<div>
+					<ul>
+						<li>Str: {{ char.attrs.str }}</li>
+						<li>Dex: {{ char.attrs.dex }}</li>
+						<li>Con: {{ char.attrs.con }}</li>
+						<li>Int: {{ char.attrs.int }}</li>
+						<li>Wis: {{ char.attrs.wis }}</li>
+						<li>Cha: {{ char.attrs.cha }}</li>
+					</ul>
+				</div>
+				<div>
+					<p>Roll Mode: {{ char.rollMode }}</p>
+					<p>Total Score: {{ char.total }}</p>
+					<p>Average Score: {{ char.average }}</p>
+					<p>Valid Classes:</p>
+					<ul class="textlist" v-if="char.validClasses.length > 0">
+						<li v-for="c in char.validClasses">{{ c }}</li>
+					</ul>
+					<p v-else>none</p>
+				</div>
+			</article>
+		</main>
+	</body>
+</html>
