@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Planets fact site</title>
+	</head>
+	<body>
+		<div id="app">
+			<nav-bar
+				:planets="planets"
+				@select="(planet) => selectPlanet(planet)"
+			></nav-bar>
+			<main>
+				<div v-if="selectedPlanet">
+					<section class="main-frame grid grid-cols-5 gap-2">
+						<div
+							class="col-span-3 grid justify-center items-center"
+						>
+							<img
+								:src="selectedPlanet.image"
+								:alt="`image of ${selectedPlanet.name}`"
+							/>
+						</div>
+						<div class="col-span-2">
+							<h2 class="text-3xl">{{ selectedPlanet?.name }}</h2>
+							<p class="my-2">
+								<span class="text-muted">Source:&nbsp;</span>
+								<a :href="selectedPlanet.source"
+									>Wikipedia &rarr;</a
+								>
+							</p>
+							<p
+								v-if="selectedTab == null"
+								class="text-md text-muted"
+							>
+								{{ selectedPlanet.overview }}
+							</p>
+							<p
+								v-if="selectedTab === 'internal'"
+								class="text-md text-muted"
+							>
+								{{ selectedPlanet.internal }}
+							</p>
+							<p
+								v-if="selectedTab === 'surface'"
+								class="text-md text-muted"
+							>
+								{{ selectedPlanet.surface }}
+							</p>
+							<div class="grid gap-2 my-4">
+								<button
+									class="push-button text-start"
+									:class="{ active: selectedTab == null }"
+									@click="() => selectedTab = null"
+								>
+									Overview
+								</button>
+								<button
+									class="push-button text-start"
+									:class="{ active: selectedTab == 'internal' }"
+									@click="() => selectedTab = 'internal'"
+								>
+									Internal Structure
+								</button>
+								<button
+									class="push-button text-start"
+									:class="{ active: selectedTab == 'surface' }"
+									@click="() => selectedTab = 'surface'"
+								>
+									Surface Geology
+								</button>
+							</div>
+						</div>
+					</section>
+					<section class="grid grid-cols gap-4">
+						<card title="Rotation Time"
+							>{{ selectedPlanet.rotation }} days</card
+						>
+						<card title="Revolution Time"
+							>{{ selectedPlanet.revolution }} days</card
+						>
+						<card title="Radius"
+							>{{ selectedPlanet.radius }} km</card
+						>
+						<card title="Average Temp."
+							>{{ selectedPlanet.temperature }}°C</card
+						>
+					</section>
+				</div>
+				<p v-else>No planet data available</p>
+			</main>
+		</div>
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>

@@ -1,0 +1,114 @@
+[
+    {
+        "name": "Mercury",
+        "rotation": 176,
+        "revolution": 115.88,
+        "radius": 2439.7,
+        "temperature": 164,
+
+        "overview": "Mercury is one of four terrestrial planets in the Solar System, which means it is a rocky body like Earth. It is the smallest planet in the Solar System, with an equatorial radius of 2,439.7 kilometres (1,516.0 mi). Mercury is also smaller—albeit more massive—than the largest natural satellites in the Solar System, Ganymede and Titan. Mercury consists of approximately 70% metallic and 30% silicate material.",
+        "internal": "Mercury appears to have a solid silicate crust and mantle overlying a solid, metallic outer core layer, a deeper liquid core layer, and a solid inner core. The composition of the iron-rich core remains uncertain, but it likely contains nickel, silicon and perhaps sulfur and carbon, plus trace amounts of other elements.",
+        "surface": "Mercury's surface is similar in appearance to that of the Moon, showing extensive mare-like plains and heavy cratering, indicating that it has been geologically inactive for billions of years.",
+
+        "source": "https://en.wikipedia.org/wiki/Mercury_(planet)",
+        "image": "/assets/planets/500px-Mercury_render_with_Blender_01.png"
+    },
+    {
+        "name": "Venus",
+        "rotation": 243,
+        "revolution": 224.7,
+        "radius": 6051.8,
+        "temperature": 41,
+
+        "overview": "Venus is one of the four terrestrial planets in the Solar System, meaning that it is a rocky body like Earth. It is similar to Earth in size and mass and is often described as Earth's \"sister\" or \"twin\".",
+        "internal": "Without data from reflection seismology or knowledge of its moment of inertia, little direct information has been available about the internal structure and geochemistry of Venus.",
+        "surface": "About 80% of the Venusian surface is covered by smooth, volcanic plains, consisting of 70% plains with wrinkle ridges and 10% smooth or lobate plains. Two highland \"continents\" make up the rest of its surface area, one lying in the planet's northern hemisphere and the other just south of the equator.",
+
+        "source": "https://en.wikipedia.org/wiki/Venus",
+        "image": "/assets/planets/500px-Venus_globe.jpg"
+    },
+    {
+        "name": "Earth",
+        "rotation": 0.99,
+        "revolution": 365,
+        "radius": 6371,
+        "temperature": 18,
+
+        "overview": "Earth is the third planet from the Sun and the only astronomical object known to harbor life. This is enabled by Earth being an ocean world, the only one in the Solar System sustaining liquid surface water. Almost all of Earth's water is contained in its global ocean, covering 70.8% of Earth's crust.",
+        "internal": "Earth's interior, like that of the other terrestrial planets, is divided into layers by their chemical or physical (rheological) properties. The outer layer is a chemically distinct silicate solid crust, which is underlain by a highly viscous solid mantle.",
+        "surface": "Earth's surface is the boundary between the atmosphere and the solid Earth and oceans. Defined in this way, it has an area of about 510 million km2 (197 million sq mi). Earth can be divided into two hemispheres: by latitude into the polar Northern and Southern hemispheres; or by longitude into the continental Eastern and Western hemispheres.",
+
+        "source": "https://en.wikipedia.org/wiki/Earth",
+        "image": "/assets/planets/500px-The_Earth_seen_from_Apollo_17.webp"
+    },
+    {
+        "name": "Mars",
+        "rotation": 1.025,
+        "revolution": 686.98,
+        "radius": 3389.5,
+        "temperature": 64,
+
+        "overview": "Mars is approximately half the diameter of Earth or twice that of the Moon, with a surface area only slightly less than the total area of Earth's dry land. Mars is less dense than Earth, having about 15% of Earth's volume and 11% of Earth's mass, resulting in about 38% of Earth's surface gravity.",
+        "internal": "Like Earth, Mars is differentiated into a dense metallic core overlaid by less dense rocky layers. The outermost layer is the crust, which is on average about 42–56 kilometres (26–35 mi) thick. The most abundant elements in the Martian crust are silicon, oxygen, iron, magnesium, aluminium, calcium, and potassium.",
+        "surface": "Mars is a terrestrial planet with a surface that consists of minerals containing silicon and oxygen, metals, and other elements that typically make up rock. The Martian surface is primarily composed of tholeiitic basalt, although parts are more silica-rich than typical basalt and may be similar to andesitic rocks on Earth, or silica glass.",
+
+        "source": "https://en.wikipedia.org/wiki/Mars",
+        "image": "/assets/planets/500px-Mars_-_August_30_2021_-_Flickr_-_Kevin_M._Gill.png"
+    },
+    {
+        "name": "Jupiter",
+        "rotation": 0.41,
+        "revolution": 4332.59,
+        "radius": 69.91,
+        "temperature": 185,
+
+        "overview": "Fifth planet from the Sun and the largest in the Solar System. It is a gas giant with a mass more than 2.5 times that of all the other planets in the Solar System combined and slightly less than one-thousandth the mass of the Sun. Its diameter is 11 times that of Earth and a tenth that of the Sun.",
+        "internal": "Outside the layer of metallic hydrogen lies a transparent interior atmosphere of hydrogen. At this depth, the pressure and temperature are above molecular hydrogen's critical pressure of 1.3 MPa and critical temperature of 33 K (−240.2 °C; −400.3 °F).",
+        "surface": "Jupiter is a gas giant, meaning its chemical composition is primarily hydrogen and helium. These materials are classified as gasses in planetary geology, a term that does not denote the state of matter. It is the largest planet in the Solar System, with a diameter of 142,984 km (88,846 mi) at its equator, giving it a volume 1,321 times that of the Earth.",
+
+        "source": "https://en.wikipedia.org/wiki/Jupiter",
+        "image": "/assets/planets/960px-Jupiter_OPAL_2024.png"
+    },
+    {
+        "name": "Saturn",
+        "rotation": 0.41,
+        "revolution": 10755.70,
+        "radius": 58232,
+        "temperature": -1,
+
+        "overview": "Saturn is a gas giant, composed predominantly of hydrogen and helium. It lacks a definite surface, though it is likely to have a solid core. The planet's rotation makes it an oblate spheroid—a ball flattened at the poles and bulging at the equator.",
+        "internal": "Despite consisting mostly of hydrogen and helium, most of Saturn's mass is not in the gas phase, because hydrogen becomes a non-ideal liquid when the density is above 0.01 g/cm3, which is reached at a radius containing 99.9% of Saturn's mass. The temperature, pressure, and density inside Saturn all rise steadily toward the core, which causes hydrogen to be a metal in the deeper layers.",
+        "surface": "The outer atmosphere of Saturn contains 96.3% molecular hydrogen and 3.25% helium by volume. The proportion of helium is significantly deficient compared to the abundance of this element in the Sun.",
+
+        "source": "https://en.wikipedia.org/wiki/Saturn",
+        "image": "/assets/planets/960px-Saturn_during_Equinox.jpg"
+    },
+    {
+        "name": "Uranus",
+        "rotation": 0.71,
+        "revolution": 30688.5,
+        "radius": 25362,
+        "temperature":-197.2,
+
+        "overview": "Uranus is the seventh planet from the Sun. It is a gaseous cyan-coloured ice giant. Most of the planet is made of water, ammonia, and methane in a supercritical phase of matter, which astronomy calls \"ice\" or volatiles.",
+        "internal": "Uranus's mass is roughly 14.5 times that of Earth, making it the least massive of the giant planets. Its diameter is slightly larger than Neptune's at roughly four times that of Earth. A resulting density of 1.27 g/cm3 makes Uranus the second least dense planet, after Saturn.",
+        "surface": "Although there is no well-defined solid surface within Uranus's interior, the outermost part of Uranus's gaseous envelope that is accessible to remote sensing is called its atmosphere.",
+
+        "source": "https://en.wikipedia.org/wiki/Uranus",
+        "image": "/assets/planets/500px-Uranus_Voyager2_color_calibrated.png"
+    },
+    {
+        "name": "Neptune",
+        "rotation": 0.67,
+        "revolution": 367.49,
+        "radius": 24622,
+        "temperature":-201,
+
+        "overview": "Neptune is the eighth and farthest known planet orbiting the Sun. It is the fourth-largest planet in the Solar System by diameter, the third-most-massive planet, and the densest giant planet. It is 17 times the mass of Earth. Compared to Uranus, its neighbouring ice giant, Neptune is slightly smaller, but more massive and denser.",
+        "internal": "Neptune's internal structure resembles that of Uranus. Its atmosphere forms about 5 to 10% of its mass and extends perhaps 10 to 20% of the way towards the core. Pressure in the atmosphere reaches about 10 GPa, or about 105 atmospheres. Increasing concentrations of methane, ammonia and water are found in the lower regions of the atmosphere.",
+        "surface": "At high altitudes, Neptune's atmosphere is 80% hydrogen and 19% helium.[30] A trace amount of methane is present. Prominent absorption bands of methane exist at wavelengths above 600 nm, in the red and infrared portion of the spectrum.",
+
+        "source": "https://en.wikipedia.org/wiki/Neptune",
+        "image": "/assets/planets/500px-Neptune_Voyager2_color_calibrated.png"
+    }
+]
