@@ -1,5 +1,5 @@
 /* https://open-props.style */
-@import "../open-props-1.7.15.css";
+@import "../assets/open-props-1.7.15.css";
 
 html {
 	--color-body-fg: var(--gray-3);
