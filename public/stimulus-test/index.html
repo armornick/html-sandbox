@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Stimulus Test</title>
+	</head>
+	<body>
+		<main class="flow">
+			<section data-controller="counter">
+				<button class="btn" data-action="click->counter#increment">
+					Increment
+				</button>
+				<span data-counter-target="count"></span>
+			</section>
+			<section data-controller="dropdown">
+				<button class="btn" data-action="click->dropdown#toggle">
+					Toggle
+				</button>
+				<div data-dropdown-target="content" hidden>Contents...</div>
+			</section>
+			<section class="flow" data-controller="search">
+				<div class="form-control">
+					<label for="search-input">Search</label>
+					<input
+						type="search"
+						name="search-input"
+						id="search-input"
+						data-search-target="input"
+						data-action="input->search#render"
+					/>
+				</div>
+				<ul data-search-target="output"></ul>
+			</section>
+		</main>
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>

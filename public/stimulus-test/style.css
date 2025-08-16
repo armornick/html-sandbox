@@ -1,0 +1,124 @@
+:root {
+	--black: #000;
+	--near-black: #111;
+	--dark-gray: #333;
+	--mid-gray: #555;
+	--gray: #777;
+	--silver: #999;
+	--light-silver: #aaa;
+	--moon-gray: #ccc;
+	--light-gray: #eee;
+	--near-white: #f4f4f4;
+	--white: #fff;
+
+	--dark-red: #e7040f;
+	--red: #ff4136;
+	--light-red: #ff725c;
+	--orange: #ff6300;
+	--gold: #ffb700;
+	--yellow: #ffd700;
+	--light-yellow: #fbf1a9;
+	--purple: #5e2ca5;
+	--light-purple: #a463f2;
+	--dark-pink: #d5008f;
+	--hot-pink: #ff41b4;
+	--pink: #ff80cc;
+	--light-pink: #ffa3d7;
+	--dark-green: #137752;
+	--green: #19a974;
+	--light-green: #9eebcf;
+	--navy: #001b44;
+	--dark-blue: #00449e;
+	--blue: #357edd;
+	--light-blue: #96ccff;
+	--lightest-blue: #cdecff;
+	--washed-blue: #f6fffe;
+	--washed-green: #e8fdf5;
+	--washed-yellow: #fffceb;
+	--washed-red: #ffdfdf;
+
+	--font-humanist: Seravek, "Gill Sans Nova", Ubuntu, Calibri, "DejaVu Sans",
+		source-sans-pro, sans-serif;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+ul,
+p,
+h1,
+h2,
+h3 {
+	margin: 0;
+}
+
+body {
+	background-color: var(--dark-gray);
+	color: var(--light-pink);
+	font-family: var(--font-humanist);
+	line-height: 1.5;
+	margin: 0;
+	min-height: 100vh;
+}
+
+a {
+	color: var(--light-green);
+	text-decoration-style: dashed;
+	text-decoration-thickness: 1px;
+	text-underline-offset: 3px;
+
+	&:where(:hover, :focus) {
+		text-decoration-style: solid;
+		text-decoration-thickness: 2px;
+	}
+}
+
+main {
+	max-width: 60rem;
+	margin-inline: auto;
+	padding: 2rem 1rem;
+}
+
+.flow > * + * {
+	margin-block-start: var(--flow-space, 1em);
+}
+
+.btn {
+	background-color: var(--purple);
+	color: var(--washed-red);
+	border: 1px solid var(--purple);
+	border-radius: 4px;
+	padding: 0.5rem 1rem;
+	cursor: pointer;
+
+	&:is(:hover, :focus) {
+		background-color: hsl(from var(--purple) h s calc(l + 10));
+	}
+}
+
+.form-control {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+
+	& > input {
+		font: inherit;
+		border-radius: 4px;
+		padding: 0.25rem 0.5rem;
+	}
+}
+
+section[data-controller] {
+	border: 1px solid var(--mid-gray);
+	border-radius: 5px;
+	padding: 1rem;
+}
+
+[data-controller="counter"] {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+}
