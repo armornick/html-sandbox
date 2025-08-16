@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Knockout Test</title>
+	</head>
+	<body>
+		<main class="flow">
+			<p data-bind="text: message"></p>
+			<table>
+				<thead>
+					<tr>
+						<th>Name</th>
+						<th>Attribute</th>
+						<th>Type</th>
+						<th>Password</th>
+						<th>Read More</th>
+					</tr>
+				</thead>
+				<tbody data-bind="foreach: cards">
+					<tr>
+						<td data-bind="text: name"></td>
+						<td data-bind="text: attribute"></td>
+						<td data-bind="text: type"></td>
+						<td data-bind="text: id"></td>
+						<td class="text-small">
+							<a data-bind="text: url, attr: { href: url }"></a>
+						</td>
+					</tr>
+				</tbody>
+			</table>
+		</main>
+		<script src="../assets/knockout-3.5.1.js"></script>
+		<script type="module" src="./app.js"></script>
+	</body>
+</html>
