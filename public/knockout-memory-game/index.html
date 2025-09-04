@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Memory Game (knockout)</title>
+	</head>
+	<body>
+		<main>
+			<section
+				class="grid"
+				data-bind="foreach: imageGrid, style: gridStyles()"
+			>
+				<article
+					data-bind="style: styles, click: () => $parent.select($index)"
+				>
+					<div
+						data-bind="hidden: shouldShow, style: placeholderStyles"
+					></div>
+					<img
+						data-bind="visible: shouldShow, attr: { src: image }, style: imageStyles"
+					/>
+				</article>
+			</section>
+		</main>
+		<dialog data-bind="using: dialogModel, style: dialogModel.dialogStyles">
+			<p data-bind="text: message">message</p>
+			<nav>
+				<button
+					type="button"
+					data-bind="text: action, click: close, style: buttonStyles"
+				>
+					action
+				</button>
+			</nav>
+		</dialog>
+		<script src="../assets/knockout-3.5.1.js"></script>
+		<script type="module" src="./main.js"></script>
+	</body>
+</html>
