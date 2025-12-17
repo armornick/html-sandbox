@@ -1,0 +1,129 @@
+:root {
+	--color-navy: #001f3f;
+	--color-blue: #0074d9;
+	--color-aqua: #7fdbff;
+	--color-teal: #39cccc;
+	--color-purple: #b10dc9;
+	--color-fuchsia: #f012be;
+	--color-maroon: #85144b;
+	--color-red: #ff4136;
+	--color-orange: #ff851b;
+	--color-yellow: #ffdc00;
+	--color-olive: #3d9970;
+	--color-green: #2ecc40;
+	--color-lime: #01ff70;
+	--color-black: #111111;
+	--color-gray: #aaaaaa;
+	--color-silver: #dddddd;
+	--color-white: #ffffff;
+}
+
+@layer base {
+	body {
+		--body-background: var(--color-navy);
+		--body-foreground: var(--color-aqua);
+		background-color: var(--body-background);
+		color: var(--body-foreground);
+		font-family: system-ui, sans-serif;
+		line-height: 1.5;
+		margin: 0;
+	}
+
+	a {
+		color: var(--color-blue);
+		text-decoration: none;
+
+		&:where(:hover, :focus) {
+			text-decoration: underline;
+			text-underline-offset: 4px;
+		}
+	}
+
+	h1,
+	h2,
+	h3,
+	p,
+	ul {
+		margin: 0;
+	}
+}
+
+@layer layout {
+	header,
+	main {
+		width: min(90%, 50rem);
+		margin-inline: auto;
+	}
+
+	main {
+		padding-block: 1rem;
+		display: flex;
+		flex-wrap: wrap;
+		gap: 1rem;
+		align-items: start;
+	}
+
+	.flow > * + * {
+		margin-block-start: var(--flow-space, 1em);
+	}
+
+	button,
+	.button {
+		--_btn-background: var(--btn-background, var(--body-background));
+		--_btn-foreground: var(--btn-foreground, var(--body-foreground));
+		--_btn-background-hover: var(
+			--btn-background-hover,
+			color-mix(in hsl, var(--_btn-background), white 10%)
+		);
+		border: var(--btn-border-width, 2px) solid
+			var(--btn-border-color, var(--color-blue));
+		color: var(--_btn-foreground);
+		background-color: var(--_btn-background);
+		font: inherit;
+		cursor: pointer;
+
+		&:where(:hover, :focus) {
+			background-color: var(--_btn-background-hover);
+		}
+	}
+}
+
+@layer components {
+	number-generator {
+		display: block;
+		border: 1px solid var(--color-yellow);
+		padding: 0.5rem;
+		width: max-content;
+
+		.number {
+			color: var(--color-yellow);
+			font-size: 2rem;
+			margin-block-end: 0.25rem;
+			text-align: center;
+		}
+
+		button {
+			--btn-border-color: var(--color-orange);
+			--btn-foreground: var(--color-orange);
+			font-size: 1.25rem;
+		}
+	}
+
+	tip-calculator {
+		--main-color: color-mix(in hsl, var(--color-purple), white 35%);
+		display: block;
+		border: 1px solid var(--main-color);
+		color: var(--main-color);
+		padding: 0.5rem;
+		width: max-content;
+
+		> * + * {
+			margin-block-start: 0.5rem;
+		}
+
+		button {
+			--btn-border-color: var(--main-color);
+			--btn-foreground: var(--main-color);
+		}
+	}
+}
